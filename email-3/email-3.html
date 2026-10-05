@@ -1,0 +1,381 @@
+
+%%[
+/* =====================================================
+   EMAIL 3: PEER PERSPECTIVE  |  SFMC VARIABLES
+   Paste above the DOCTYPE. Outputs nothing to the email.
+   ===================================================== */
+
+/* ---------- PERSONALIZATION ---------- */
+/* "LastName" must match the field name in your sendable Data Extension */
+VAR @lastName, @greeting
+SET @lastName = Trim(AttributeValue("LastName"))
+
+IF NOT EMPTY(@lastName) THEN
+  SET @greeting = CONCAT("Dear Dr. ", @lastName, ",")
+ELSE
+  SET @greeting = "Dear Healthcare Professional,"
+ENDIF
+
+/* ---------- LINKS (swap in real URLs) ---------- */
+VAR @urlArticle, @urlCase, @urlLogo, @urlPI, @urlPanel, @urlPatientProfile, @urlPrivacy, @urlVideo
+SET @urlArticle        = "https://www.example.com/article"
+SET @urlCase           = "https://www.example.com/case"
+SET @urlLogo           = "https://www.example.com/"
+SET @urlPI             = "https://www.example.com/pi"
+SET @urlPanel          = "https://www.example.com/panel"
+SET @urlPatientProfile = "https://www.example.com/patient-profile"
+SET @urlPrivacy        = "https://www.example.com/privacy"
+SET @urlVideo          = "https://www.example.com/video"
+
+/* ---------- FOOTER ---------- */
+VAR @year
+SET @year = FormatDate(Now(), "YYYY")
+]%%
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    <!--<meta name='x-apple-disable-message-reformatting'>-->
+    <title>[Brand]: A Peer Perspective</title>
+    <!--[if gte mso 9]>
+      <style type="text/css">
+        label a {
+          text-decoration: none;
+        }
+      </style>
+    <![endif]-->
+    <style type="text/css">
+      li {
+        text-align: -webkit-match-parent;
+        display: list-item;
+      }
+      a[href^="x-apple-data-detectors:"] {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      body {
+        width: 100% !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: Arial, sans-serif;
+      }
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td {
+        line-height: 100%;
+      }
+      table {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        padding: 0;
+      }
+      table td {
+        border-collapse: collapse;
+      }
+      #MessageViewBody,
+      #MessageWebViewDiv {
+        width: 100% !important;
+      }
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+    </style>
+    <style type="text/css">
+      .gmailfix {
+        display: none;
+        display: none !important;
+      }
+      .mobile-only{
+        display: none;
+      }
+    </style>
+    <style>
+      @media only screen and (max-width: 600px) {
+        u + .gmail {
+          min-width: 330px !important;
+        }
+        .email-container{
+            width: 360px !important;
+            margin: auto !important;
+        }
+        .desktop-only{
+            display: none !important;
+        }
+        .mobile-only{
+            display:block;
+        }
+        .mobile-padding{
+          padding: 0px 30px !important;
+        }
+        .mobile-side-padding{
+            padding-left: 30px !important;
+            padding-right: 30px !important;
+        }
+        .mobile-top-small-padding{
+            padding-top: 12px !important;
+        }
+        .no-margin-padding{
+          margin-right: 0 !important;
+        }
+        .mobile-btm-padding{
+          padding-bottom: 40px !important;
+        }
+        .stack-on-mobile{
+            display:inline-block;
+            margin: 0 auto !important;
+            width: 100% !important; 
+            box-sizing: border-box;
+        }
+        .mobile-full-img{
+            width: 100% !important;
+        }
+        .no-margin-right{
+          margin-right: 0 !important;
+        }
+      }
+    </style>
+    <!--[if (mso)|(mso 16)]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG /> <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+  </head>
+  <body class="gmail">
+    <!-- PRE-HEADER -->
+    <div style="display: none; mso-hide: all; width: 0px; height: 0px; max-width: 0px; max-height: 0px; font-size: 0px; line-height: 0px;">
+        Hear how [specialty] colleagues are approaching [condition]. &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+    </div>
+    <table role="presentation" width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;border: 1px solid #f2f2f2" class="email-container">
+      <!-- WEB VIEW + LOGO -->
+      <tr>
+        <td style="padding: 40px 40px 40px; color: #180756 !important;" class="mobile-side-padding">
+          <p style="margin: 0px 0 20px; text-align: center;">%%[ IF _messageContext != "VAWP" then ]%%<span style="color: #180756;"><span style="font-size: 14px; line-height: 18px;"><a style="color: #180756;" href="%%view_email_url%%" alias="VAWP" target="_blank"><span style="color: #180756;"><u>Web View</u></span></a></span></span>%%[ENDIF]%%</p>
+          <a href="%%=RedirectTo(@urlLogo)=%%" alias="top-logo" style="text-decoration:none;" target="_blank">
+            <img src="./images/logoipsum-410.png" alt="[Brand] logo" style="width:250px; display:block;" width="250" border="0"/>
+          </a>
+        </td>
+      </tr>
+      <!-- /WEB VIEW + LOGO -->
+      <!-- HERO -->
+      <tr>
+        <td align="center" style="padding: 0px 0 0;">
+          <a href="%%=RedirectTo(@urlVideo)=%%" alias="header-link" style="text-decoration:none;" target="_blank">
+            <img src="./images/header.jpg" width="600" alt='Hero image: [KOL portrait or video thumbnail]' style="width: 100%; height: auto; max-width: 600px; display: block" border="0"/>
+          </a>
+        </td>
+      </tr>
+      <!-- /HERO -->
+      <!-- INTRO TEXT -->
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="padding: 20px 40px 0px; color: #180756 !important;" class="mobile-side-padding">
+                <p style="font-size: 38px; line-height: 42px; color: #180756; font-family: Arial, Helvetica, sans-serif; font-weight:600; margin: 40px 10px 32px 0; " class="no-margin-right">
+                  A peer perspective on <span style='color: #0078a8'>[Product]</span>: [discussion topic].
+                </p>
+                <p style="font-size: 22px; line-height: 26px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 32px 0 32px; font-weight: 700;">
+                  [KOL name], [credentials], on [topic]. 
+                </p>
+                <p style="font-size: 18px; line-height: 22px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 0 0 20px;">
+                    %%=v(@greeting)=%%
+                </p>
+                <p style="font-size: 18px; line-height: 22px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 0 40px 40px 0;" class="no-margin-padding">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [One sentence on why this perspective matters.]
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; padding: 0 40px;" class="mobile-side-padding">
+                <a href="%%=RedirectTo(@urlVideo)=%%" alias="watch-video-btn" style="text-decoration:none;" target="_blank">
+                  <img src="./images/btn-watch.png" alt="Button: Watch the discussion" width="451" style="padding: 0px 0 0; width:451px; display:inline-block;" class="mobile-full-img" border="0" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 0 40px 20px;" class="mobile-side-padding">    
+                <p style="font-size: 22px; line-height: 26px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 40px 0 0px; font-weight: 700;">
+                    In their words:
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>    
+      <!-- /INTRO TEXT -->
+      
+      <!-- CALLOUT SECTION -->
+      <tr>
+        <td align="center" style="padding: 0px 40px 40px; " class="mobile-side-padding mobile-top-small-padding">
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="padding: 20px 24px 20px 24px;border: 2px solid #0078a8;">
+                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="padding: 0px 20px 0 0px;" class="stack-on-mobile mobile-top-small-padding" valign="top">
+                      <a href="%%=RedirectTo(@urlVideo)=%%" alias="callout-icon" style="text-decoration:none;" target="_blank">
+                        <img src="./images/quotes.png" alt="Icon: Quote" style="display:block" width="60" border="0"/>
+                      </a>
+                    </td>
+                    <td style="padding: 0px 0px 0px 0;" class="stack-on-mobile mobile-top-small-padding" valign="top">
+                      <p style="font-size: 22px; line-height: 26px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 0px 0 20px; font-weight: 700;">
+                        [Pull quote from the KOL.] Lorem ipsum dolor sit amet, consectetur adipiscing elit.”
+                      </p>
+                      <p style="font-size: 20px; line-height: 24px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 0px 0 0px; font-weight: 400;">
+                        [KOL name], [credentials], [institution]. [Disclosure statement, if required.]
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- /CALLOUT SECTION -->
+      
+      <!-- RESOURCES SECTION -->
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="padding: 20px 20px 20px 40px; color: #180756 !important;" class="stack-on-mobile mobile-padding mobile-top-small-padding">
+                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="padding: 0px 0px 0px 0px; text-align:center;" valign="bottom">
+                      <a href="%%=RedirectTo(@urlCase)=%%" alias="case-discussion-link" style="text-decoration:none;" target="_blank">
+                        <img src="./images/icon-1.png" alt="Resource icon -- Case discussion" style="display:inline-block" width="120" border="0"/>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 32px 0px 0px 0px;" valign="top" class="mobile-top-small-padding">
+                      <p style="font-size: 18px; line-height: 22px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 0 0 20px; ">
+                        <span style="font-weight:700;">Case discussion</span> <br/>
+                        [Short description of the resource.]
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td style="padding: 20px 40px 20px 20px; color: #180756 !important;" class="stack-on-mobile mobile-padding">
+                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="padding: 0px 0px 0px 0px; text-align:center;" valign="bottom">
+                      <a href="%%=RedirectTo(@urlPatientProfile)=%%" alias="patient-profile-link" style="text-decoration:none;" target="_blank">
+                        <img src="./images/icon-2.png" alt="Resource icon -- Patient profile" style="display:inline-block" width="120" border="0"/>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 32px 0px 0px 0px;" valign="top" class="mobile-top-small-padding">
+                      <p style="font-size: 18px; line-height: 22px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 0 0 20px; ">
+                        <span style="font-weight:700;">Patient profile</span> <br/>
+                        [Short description of the resource.]
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 20px 20px 20px 40px; color: #180756 !important;" class="stack-on-mobile mobile-padding">
+                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="padding: 0px 0px 0px 0px; text-align:center;" valign="bottom">
+                      <a href="%%=RedirectTo(@urlPanel)=%%" alias="panel-qa-link" style="text-decoration:none;" target="_blank">
+                        <img src="./images/icon-3.png" alt="Resource icon -- Panel Q&amp;A"  style="display:inline-block" width="120" border="0"/>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 32px 0px 0px 0px;" valign="top" class="mobile-top-small-padding">
+                      <p style="font-size: 18px; line-height: 22px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 0 0 20px; ">
+                        <span style="font-weight:700;">Panel Q&amp;A</span> <br/>
+                        [Short description of the resource.]
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td style="padding: 20px 40px 20px 20px; color: #180756 !important;" class="stack-on-mobile mobile-padding mobile-btm-padding">
+                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="padding: 0px 0px 0px 0px; text-align:center;" valign="bottom">
+                      <a href="%%=RedirectTo(@urlArticle)=%%" alias="peer-article-link" style="text-decoration:none;" target="_blank">
+                        <img src="./images/icon-4.png" alt="Resource icon -- Peer-authored article" style="display:inline-block" width="120" border="0"/>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 32px 0px 0px 0px;" valign="top" class="mobile-top-small-padding">
+                      <p style="font-size: 18px; line-height: 22px; color: #180756; font-family: Arial, Helvetica, sans-serif; margin: 0 0 20px; ">
+                        <span style="font-weight:700;">Peer-authored article</span> <br/>
+                        [Short description of the resource.]
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- /RESOURCES SECTION -->
+      
+      <!-- FOOTER -->
+      <tr>
+        <td style="padding: 40px 40px 40px; background-color: #F4F4F4" class="mobile-side-padding">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 0px 0 0; ">
+                <b>IMPORTANT SAFETY INFORMATION</b>
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 10px 0 0; ">
+                [Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Insert approved ISI here.]
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 10px 0 0; ">
+                Please see full <a href="%%=RedirectTo(@urlPI)=%%" alias="pi-link" target="_blank" style="color: #180756; text-decoration: underline">Prescribing Information</a> for [Brand], including [Boxed Warning, if applicable].
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 20px 0 0; ">
+                <b>INDICATION</b><br/>[Insert approved indication statement here.]
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 10px 0 0; ">
+                [Adverse event reporting statement, per your region’s requirements.]
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 10px 0 0; ">
+                You are receiving this email because [opt-in basis]. If you no longer wish to receive these emails, you can <a href="%%unsub_center_url%%" target="_blank" style="color: #180756; text-decoration: underline">unsubscribe</a> or <a href="%%profile_center_url%%" target="_blank" style="color: #180756; text-decoration: underline">manage your preferences</a> at any time.
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 20px 0 20px; ">
+                <span style="font-weight: 700;">References: 1.</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores natus aut architecto sed error <em>accusamus inventore obcaecati fuga voluptas esse</em>. Veniam labore expedita molestias nam, consequuntur at. <span style="font-weight: 700;">2.</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ratione enim vero temporibus at expedita omnis qui magnam. Ex ea reiciendis et. Accusantium ex obcaecati voluptates voluptatum molestiae suscipit eligendi. <span style="font-weight: 700;">3.</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. <em>Accusantium consectetur ipsum et saepe excepturi eaque</em>. Dicta rerum enim quae reprehenderit. <span style="font-weight: 700;">4.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. [2026]
+            </p>
+            <a href="%%=RedirectTo(@urlLogo)=%%" alias="footer-logo" style="text-decoration:none;" target="_blank">
+              <img src="./images/logoipsum-410.png" alt="[Brand] logo" style="width:150px; display:block;" width="150" border="0"/>
+            </a>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 20px 0 0; ">
+                &copy; %%=v(@year)=%% [Company]. All rights reserved. [Brand] is a registered trademark of [Company]. [Job code / approval ID]
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 10px 0 0; ">
+                [Company] respects your privacy. Further information can be found in the <a href="%%=RedirectTo(@urlPrivacy)=%%" alias="privacy" target="_blank" style="color: #180756; text-decoration: underline">Privacy Statement</a>.
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px !important; line-height: 15px !important; font-weight: normal !important; color: #180756; margin: 0 !important; padding: 10px 0 0; ">
+                [Company name] | [Street address] | [City, State ZIP] | [Country]
+            </p>
+        </td>
+      </tr>
+      <!-- /FOOTER -->
+    </table>
+  </body>
+</html>
