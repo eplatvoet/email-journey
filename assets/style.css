@@ -1,0 +1,91 @@
+/* CSS FOR THE INDEX FILE ONLY */
+body{
+    background-color: #999999;
+    font-family: "Montserrat", sans-serif;
+    margin:0;
+}
+.content-wrapper{
+    background-color: #ffffff;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1px 50px 25px;
+}
+h1{
+    font-size:1.75rem;
+    color: #180756;
+}
+span.no-break{
+    white-space: nowrap;
+}
+h3{
+    font-size:1.25rem;
+    font-weight: 400;
+    color: #180756;
+}
+p{
+    font-size: 1rem;
+    margin: 0;
+    color: #180756;
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+.pt-10{
+    padding-top: 10px;
+}
+.email-list-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+    border: 1px solid #180756;
+    border-radius: 10px;
+}
+.email-example{
+    width:245px;
+    border: 1px solid #180756;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.email-example .email-img-wrap{
+    text-align: center;
+    padding-bottom:10px;
+}
+.email-example .email-img-wrap a, .email-link{
+    cursor: pointer;
+}
+.email-example .email-img-wrap a:hover >img{
+    border:2px solid #0078a8;
+}
+.email-example .email-img-wrap img{
+    width: 220px;
+    height:auto;
+}
+.email-example .email-info-wrap{
+    padding:10px 0 0;
+    border-top:1px solid #0078a8;
+}
+.email-link{
+    color: #0078a8;
+    text-decoration: underline;
+}
+.email-link:hover{
+    font-weight: bold !important;
+    color: #0078a8;
+}
+.email-link:visited{
+    font-weight: bold;
+    color: #0078a8;
+}
+@media screen and (max-width: 768px) {
+    h1{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 450px) {
+    .email-example .email-img-wrap img{
+        width:100%;
+        min-width: 100%;
+    }
+}
